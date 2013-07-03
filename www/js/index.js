@@ -91,6 +91,7 @@ var app = {
     },
     // Android
     onNotificationGCM: function(e) {
+        alert("aca vengo como los rules");
         switch( e.event )
         {
             case 'registered':
