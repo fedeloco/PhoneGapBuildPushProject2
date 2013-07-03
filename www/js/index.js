@@ -40,7 +40,7 @@ var app = {
     },
     errorHandler:function(error) {
         console.log("Error Handler  " + error);
-        alert(error);
+        alert("Errors: "+error);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
@@ -51,7 +51,9 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         // TODO: Enter your own GCM Sender ID in the register call for Android
         if (device.platform == 'android' || device.platform == 'Android') {
+            alert("voy a registrar la kga de dispositivo");
             pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"977857505502","ecb":"onNotificationGCM"});
+            alert("q ondiwi");
         }
         else {
             pushNotification.register(this.tokenHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
