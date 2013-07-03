@@ -54,8 +54,8 @@ var app = {
         // TODO: Enter your own GCM Sender ID in the register call for Android
         if (device.platform == 'android' || device.platform == 'Android') {
             alert("voy a registrar la kga de dispositivo");
-            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"977857505502","ecb":"onNotificationGCM"});
-            alert("q ondiwi");
+            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"977857505502","ecb":"app.onNotificationGCM"});
+            alert("q ondiwiiii");
         }
         else {
             pushNotification.register(this.tokenHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
